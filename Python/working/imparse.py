@@ -90,7 +90,7 @@ def tok(seq):
       (e,) = x
       r = tok(e)
       if len(r) > 0:
-        terminals = terminals + [t for t in r not in terminals]
+        terminals = terminals + [t for t in r if t not in terminals]
   return terminals
 
 
