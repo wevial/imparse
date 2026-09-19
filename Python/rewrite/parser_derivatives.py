@@ -1,4 +1,4 @@
-"""Approach B — parsing with derivatives (Brzozowski 1964; Might, Darais & Spiewak 2011).
+"""Derivatives — parsing with derivatives (Brzozowski 1964; Might, Darais & Spiewak 2011).
 
 The idea: the derivative of a language L with respect to a token c is the set of things that
 may FOLLOW c in L. Parsing is then a loop with no recursion over the input at all:

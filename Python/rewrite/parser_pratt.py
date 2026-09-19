@@ -1,4 +1,4 @@
-"""Approach A — a Pratt parser derived from the grammar, memoized descent for everything else.
+"""Pratt — a Pratt parser derived from the grammar, memoized descent for everything else.
 
 The idea: nobody should type binding powers by hand when the grammar already declares them.
 At load time, walk each Production and sort its choices:

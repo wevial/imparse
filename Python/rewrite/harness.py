@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""harness.py a|b|old [--fuzz N] [--time-limit S] [-v]
+"""harness.py pratt|derivatives|old [--fuzz N] [--time-limit S] [-v]
 
-Runs one parser against the spec. `a` loads parser_a.py, `b` loads parser_b.py, `old` runs the
+Runs one parser against the spec. `pratt` loads parser_pratt.py, `derivatives` loads
+parser_derivatives.py, `old` runs the
 2014 parser so you can see the baseline. A parser module exposes exactly one function:
 
     parse(grammar, tokens) -> tree | None
@@ -75,7 +76,7 @@ def timing(parse, limit):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('which', choices=['a', 'b', 'old'])
+    ap.add_argument('which', choices=['pratt', 'derivatives', 'old'])
     ap.add_argument('--fuzz', type=int, default=300)
     ap.add_argument('--time-limit', type=float, default=3.0, help='seconds per single parse')
     ap.add_argument('-v', '--verbose', action='store_true')

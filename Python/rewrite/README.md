@@ -11,16 +11,16 @@ Two replacements to try, each a stub with notes on what will bite:
 
 | | file | idea | expected cost |
 |---|---|---|---|
-| A | `parser_a.py` | Pratt parser whose binding powers are derived from the grammar's layers and `Assoc*` tags, memoized descent for the rest | linear |
-| B | `parser_b.py` | parsing with derivatives: rewrite the grammar once per token, no recursion over the input | cubic worst case, near-linear with compaction |
+| Pratt | `parser_pratt.py` | Pratt parser whose binding powers are derived from the grammar's layers and `Assoc*` tags, memoized descent for the rest | linear |
+| Derivatives | `parser_derivatives.py` | parsing with derivatives: rewrite the grammar once per token, no recursion over the input | cubic worst case, near-linear with compaction |
 
 ## Running it
 
 ```
-python3 harness.py old      # the 2014 parser, as a baseline
-python3 harness.py a        # parser_a.py
-python3 harness.py b        # parser_b.py
-python3 harness.py a -v     # show passing cases too
+python3 harness.py old            # the 2014 parser, as a baseline
+python3 harness.py pratt          # parser_pratt.py
+python3 harness.py derivatives    # parser_derivatives.py
+python3 harness.py pratt -v       # show passing cases too
 ```
 
 Python 3, standard library only. A parser exposes one function, `parse(grammar, tokens) -> tree | None`; the harness tokenizes with the 2014 tokenizer so you can stay on parsing.
