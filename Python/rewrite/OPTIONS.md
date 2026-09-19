@@ -14,7 +14,7 @@ Notes from a conversation in September 2026 about an idea from 2014: rewrite imp
 
 ## The constraint that shapes the choice
 
-imparse interprets the grammar as data at run time, so that one small parser can be ported to Python, JavaScript, PHP and Haskell. That rules out anything that needs a table-generation step (LR, LALR, GLR): the generator would have to be ported too. Whatever replaces the parser should be a few hundred lines of loops, maps and pattern matches over the grammar ADT.
+imparse interprets the grammar as data at run time, so that one small parser can be ported to Python, JavaScript and Haskell. That rules out anything that needs a table-generation step (LR, LALR, GLR): the generator would have to be ported too. Whatever replaces the parser should be a few hundred lines of loops, maps and pattern matches over the grammar ADT.
 
 ## The two chosen
 
