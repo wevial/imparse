@@ -7,7 +7,7 @@ The 2014 parser (`../working/imparse.py`) is backtracking recursive descent. Mea
 - a chain of prefix operators or nested parentheses is exponential: 8 tokens take about a second, 16 time out;
 - plain infix chains are roughly quadratic.
 
-Two replacements to try, each a stub with notes on what will bite:
+Two replacements to try, each a stub with notes on what will bite. `OPTIONS.md` has the reasoning: why these two, what else was considered, and the references.
 
 | | file | idea | expected cost |
 |---|---|---|---|
